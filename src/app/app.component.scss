@@ -1,0 +1,30 @@
+@import "./theme.scss";
+.mainPage{
+    margin-top: 38px;
+}
+
+::ng-deep .breadcrumb{
+        font-size: 12px;
+    padding: 3px 5px;
+    background-color: #f8f8f8;
+    border-radius: 0px;
+}
+::ng-deep .breadcrumb-item{
+    a{
+        color:$fontColor;
+    }
+}
+::ng-deep .breadcrumb-item+.breadcrumb-item::before{
+  
+        content: "";
+        background-image: url('../assets/breadArrow.svg');
+        background-size: contain;
+        height: 8px;
+        width: 14px;
+        background-repeat: no-repeat;
+        
+}
+::ng-deep .breadcrumb-item.active{
+        color: #424a51;
+        font-weight: 500;
+}

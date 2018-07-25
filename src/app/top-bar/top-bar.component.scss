@@ -1,0 +1,85 @@
+@import "../theme.scss";
+nav {
+    box-shadow: 1px 2px 2px #ddd;
+   .active {
+        background-color:$themeColor;
+        display: inline-block;
+        color: $white;
+    }
+    a:active{
+        color:$black;
+    }
+    
+	ul {
+		list-style: none;
+		position: relative;
+		margin: 0;
+		padding: 0;
+		display: flex;
+        flex-direction: row;
+        li{
+            display: flex;
+           &:first-child{
+               align-items: center;
+                img{
+                    background-color: $white;                  
+                    height: 32px;
+                    width: 170px;
+                    object-fit: contain;
+                }
+                &:hover{
+                    background-color: transparent;
+                } 
+            }
+        }
+		a {
+			color: #333;
+			text-decoration: none;
+			font-size: 13px;
+			line-height: 32px;
+			padding: 0 15px;
+        }
+        
+		li:hover {
+			>ul {
+				display: block
+			}
+		}
+		ul li {
+			position: relative;
+			float: left;
+			margin: 0;
+			padding: 0;
+			&:hover {
+				background: #f6f6f6;
+			}
+		}
+		ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+            background: #fff;
+             box-shadow: 1px 2px 2px #ddd;
+			padding: 0;
+			li {
+				float: none;
+                white-space: nowrap;
+                padding: 10px 5px;
+				a {
+					line-height: 120%;
+                    padding: 10px 15px
+                    
+				}
+			}
+			ul {
+				top: 0;
+				left: 100%
+			}
+		}
+	}
+}
+
+nav ul li.current-menu-item {
+	background: #ddd
+}
